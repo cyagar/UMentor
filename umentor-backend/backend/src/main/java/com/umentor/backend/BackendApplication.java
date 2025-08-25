@@ -7,16 +7,11 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.CrossOrigin;
 
 @SpringBootApplication
-@RestController // Add this annotation
+@RestController
 @CrossOrigin(origins = "http://localhost:3000")
 public class BackendApplication {
+
     public static void main(String[] args) {
         SpringApplication.run(BackendApplication.class, args);
-    }
-
-    // Add this method
-    @GetMapping("/hello")
-    public String hello() {
-        return "Hello from the backend!";
     }
 }
